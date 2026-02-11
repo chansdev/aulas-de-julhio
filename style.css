@@ -1,0 +1,65 @@
+* {
+    padding: 0xp;
+    margin: 0px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#portifolio {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    position: relative;
+
+    #container1 {
+        display: grid;
+        gap: 30px;
+        background-color: rgb(20, 20, 20);
+        color: white;
+        padding: 60px 40px;
+
+        .img-pfp {
+            display: grid;
+            justify-self: center;
+            justify-items: center;
+            align-content: center;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 15px white solid;
+
+            img {
+                border-radius: 50%;
+                border: 8px #323b4c solid;
+            }
+        }
+
+        .titulo {
+            font-size: 35px;
+            padding-bottom: 10px;
+        }
+        
+        .sobre-mim {
+            p{
+                font-size: 25px;
+            }
+        }
+    }
+
+    #container2 {
+        padding: 20px;
+    }
+}
