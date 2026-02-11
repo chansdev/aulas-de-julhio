@@ -1,65 +1,166 @@
 * {
-    padding: 0xp;
-    margin: 0px;
+  padding: 0xp;
+  margin: 0px;
 }
 
 ul {
-    list-style-type: none;
-    padding: 0px;
+  list-style-type: none;
+  padding: 0px;
 }
 
 img {
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 #portifolio {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  position: relative;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+  #container1 {
     display: grid;
-    grid-template-columns: 2fr 3fr;
-    position: relative;
+    gap: 30px;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    padding: 60px 40px;
 
-    #container1 {
+    .img-pfp {
+      display: grid;
+      justify-self: center;
+      justify-items: center;
+      align-content: center;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 15px white solid;
+
+      img {
+        border-radius: 50%;
+        border: 8px #323b4c solid;
+      }
+    }
+
+    .titulo {
+      font-size: 40px;
+      padding-bottom: 10px;
+    }
+
+    .sobre-mim {
+      p {
+        font-size: 25px;
+      }
+    }
+
+    .lista {
+      display: grid;
+      gap: 10px;
+      font-size: 25px;
+    }
+  }
+
+  #container2 {
+    padding: 40px 20px;
+
+    h1 {
+      font-size: 60px;
+    }
+
+    p {
+      font-size: 40px;
+    }
+
+    .cursos {
+      padding: 20px 0px;
+
+      h2 {
+        font-size: 50px;
+        margin-bottom: 10px;
+        color: rgb(44, 44, 44);
+      }
+
+      ul {
         display: grid;
-        gap: 30px;
-        background-color: rgb(20, 20, 20);
-        color: white;
-        padding: 60px 40px;
+        gap: 20px;
+        color: rgb(44, 44, 44);
 
-        .img-pfp {
+        li {
+          margin-left: 45px;
+          position: relative;
+
+          .bolaC,
+          .bolaB {
             display: grid;
-            justify-self: center;
-            justify-items: center;
-            align-content: center;
-            width: 300px;
-            height: 300px;
+            position: absolute;
+            left: -40px;
+            width: 21px;
+            height: 21px;
             border-radius: 50%;
-            border: 15px white solid;
+            background-color: rgb(44, 44, 44);
+          }
 
-            img {
-                border-radius: 50%;
-                border: 8px #323b4c solid;
-            }
+          .bolaC {
+            align-self: start;
+          }
+
+          .bolaB {
+            align-self: end;
+          }
         }
 
-        .titulo {
-            font-size: 35px;
-            padding-bottom: 10px;
+        li::before {
+          content: "";
+          display: grid;
+          position: absolute;
+          width: 5px;
+          height: 90%;
+          left: -32px;
+          top: 5%;
+          background-color: rgb(44, 44, 44);
         }
-        
-        .sobre-mim {
-            p{
-                font-size: 25px;
-            }
+
+        .ano {
+          font-size: 35px;
         }
+
+        .curso {
+          font-size: 30px;
+        }
+
+        .empresa {
+          font-size: 25px;
+        }
+      }
     }
 
-    #container2 {
-        padding: 20px;
+    .repertorio {
+      h2 {
+        font-size: 50px;
+        margin-bottom: 20px;
+        color: rgb(44, 44, 44);
+      }
+
+      ul {
+        display: grid;
+        gap: 20px;
+
+        li {
+          font-size: 30px;
+          color: rgb(44, 44, 44);
+
+          a:hover {
+            text-decoration: underline;
+            color: red;
+          }
+        }
+      }
     }
+  }
 }
