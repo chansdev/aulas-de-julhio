@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades de Heitor</title>
+
+    <link rel="stylesheet" href="./styel.css">
+    <link rel="shortcut icon" href="./bigode.jpg" type="image/x-icon">
+</head>
+<body>
+    <h1>Qual atividade quer ver agora?</h1>
+    <select name="atvOpc" id="atvOpc">
+        <option value="atv1">Atividade 1</option>
+        <option value="atv2">Atividade 2</option>
+        <option value="atv3">Atividade 3</option>
+        <option value="atv4">Atividade 4</option>
+    </select>
+
+    <section class="opcao" id="atv1">
+        <h1>teste 1</h1>
+    </section>
+    <section class="opcao" id="atv2">
+        <h1>teste 2</h1>
+    </section>
+    <section class="opcao" id="atv3">
+        <h1>teste 3</h1>
+    </section>
+    <section class="opcao" id="atv4">
+        <h1>teste 4</h1>
+    </section>
+
+    <script>
+        opcao = document.querySelector("#atvOpc");
+        document.querySelectorAll(".opcao").forEach( (e) => {
+            e.style.display = "none"
+        })
+
+        opcao.addEventListener("click", () => {
+            document.querySelectorAll(".opcao").forEach( (e) => {
+            e.style.display = "none"
+        })
+
+            document.querySelector(`#${opcao.value}`).style.display = "grid";
+
+            console.log(opcao.value)
+        })
+    </script>
+</body>
+</html>

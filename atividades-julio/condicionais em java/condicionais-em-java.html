@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionais em Java</title>
+
+    <link rel="stylesheet" href="./styel.css">
+    <link rel="shortcut icon" href="./bigode.jpg" type="image/x-icon">
+</head>
+<body>
+    <h1>Qual atividade quer ver agora?</h1>
+    <select name="atvOpc" id="atvOpc">
+        <option value="atv1">1. Validação de idade em cadastro</option>
+        <option value="atv2">2. Sistema de avaliação escolar</option>
+        <option value="atv3">3. Verificação de estoque em um e-commerce</option>
+        <option value="atv4">4. Menu de um aplicativo</option>
+        <option value="atv5">5. Classificação etária para um jogo</option>
+        <option value="atv6">6. Verificação de número par ou ímpar</option>
+        <option value="atv7">7. Sistema de desconto em loja online</option>
+        <option value="atv8">8. Sistema de login</option>
+        <option value="atv9">9. Controle de temperatura</option>
+        <option value="atv10">10. Sistema simples de banco</option>
+    </select>
+
+    <section class="opcao" id="atv1">
+        <h1>1. Validação de idade em cadastro</h1>
+        <form action="">
+            <label for="idade">Informe sua Idade:</label>
+            <input type="number" name="idade" id="idade">
+            <button type="submit">Verificar</button>
+        </form>
+    </section>
+    <section class="opcao" id="atv2">
+        <h1>2. Sistema de avaliação escolar</h1>
+        <form action="">
+            <label for="media">Informe sua Média:</label>
+            <input type="text" name="media" id="media">
+            <button type="submit">Verificar</button>
+        </form>
+        <p>Resposta à pergunta: Esse sitema é comum em escolar pra facilitar na hora de saber qual aluno passou e qual reprovou.</p>
+    </section>
+    <section class="opcao" id="atv3">
+        <h1>3. Verificação de estoque em um e-commerce</h1>
+        <form action="">
+            <label for="estoque">Qual produto deseja comprar</label>
+            <select name="estoque" id="estoque">
+                <option value="prod1">Produto 1</option>
+                <option value="prod2">Produto 2</option>
+                <option value="prod3">Produto 3</option>
+                <option value="prod4">Produto 4</option>
+            </select>
+            <button type="submit">Verificar</button>
+        </form>
+        <p>Resposta à pergunta: Sites de compra online.</p>
+    </section>
+    <section class="opcao" id="atv4">
+        <h1>3. Verificação de estoque em um e-commerce</h1>
+        <form action="">
+            <label for="menu">Menu</label>
+            <select name="menu" id="menu">
+                <option value="perfil">Perfil</option>
+                <option value="editar-perfil">Editar Perfil</option>
+                <option value="configuracoes">Configuracoes</option>
+                <option value="sair">Sair</option>
+            </select>
+            <button type="submit">Verificar</button>
+        </form>
+        <h2 id="menuResult"></h2>
+        <p>Resposta à pergunta: Porque os valores sao imutáveis.</p>
+    </section>
+    <section class="opcao" id="atv5">
+        <h1>5. Classificação etária para um jogo</h1>
+        <form action="">
+            <label for="classificacao">Informe sua Idade:</label>
+            <input type="number" name="classificacao" id="classificacao">
+            <button type="submit">Verificar</button>
+        </form>
+        <h2>Classificação: <span id="resultClassif"></span></h2>
+        <p>Resposta à pergunta: Para que jogadores não vejam conteúdos inadequados para a sua idade.</p>
+    </section>
+    <section class="opcao" id="atv6">
+        <h1>6. Verificação de número par ou ímpar</h1>
+        <form action="">
+            <label for="num">Informe o Número:</label>
+            <input type="text" name="num" id="num">
+            <button type="submit">Verificar</button>
+        </form>
+        <h2>Par ou Ípar: <span id="parouimpar"></span></h2>
+    </section>
+    <section class="opcao" id="atv7">
+        <h1>7. Sistema de desconto em loja online</h1>
+        <form action="">
+            <label for="compraValor">Informe o Valor da Compra:</label>
+            <input type="text" name="compraValor" id="compraValor">
+            <button type="submit">Verificar</button>
+        </form>
+        <h2>Valor Inicial: <span id="valorinicial"></span></h2>
+        <h2>Desconto: <span id="desconto"></span></h2>
+        <h2>Valor Final: <span id="valorfinal"></span></h2>
+        <p>Resposta à pergunta: Para que para não haver perca de tempo calculando descontos.</p>
+    </section>
+    <section class="opcao" id="atv8">
+        <h1>teste 4</h1>
+    </section>
+    <section class="opcao" id="atv9">
+        <h1>teste 4</h1>
+    </section>
+    <section class="opcao" id="atv10">
+        <h1>teste 4</h1>
+    </section>
+    
+
+    <script>
+        opcao = document.querySelector("#atvOpc");
+        document.querySelectorAll(".opcao").forEach( (e) => {
+            e.style.display = "none"
+        })
+
+        opcao.addEventListener("click", () => {
+            document.querySelectorAll(".opcao").forEach( (e) => {
+            e.style.display = "none"
+        })
+
+            document.querySelector(`#${opcao.value}`).style.display = "grid";
+
+            console.log(opcao.value)
+        })
+    </script>
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
