@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Condicionais em Java</title>
 
-    <link rel="stylesheet" href="./styel.css">
+    <link rel="stylesheet" href="./condicionais-em-java.css">
     <link rel="shortcut icon" href="./bigode.jpg" type="image/x-icon">
 </head>
 <body>
@@ -55,7 +55,7 @@
         <p>Resposta à pergunta: Sites de compra online.</p>
     </section>
     <section class="opcao" id="atv4">
-        <h1>3. Verificação de estoque em um e-commerce</h1>
+        <h1>4. Menu de um aplicativo</h1>
         <form action="">
             <label for="menu">Menu</label>
             <select name="menu" id="menu">
@@ -101,13 +101,38 @@
         <p>Resposta à pergunta: Para que para não haver perca de tempo calculando descontos.</p>
     </section>
     <section class="opcao" id="atv8">
-        <h1>teste 4</h1>
+        <h1>8. Sistema de login</h1>
+        <form action="">
+            <label for="usuario">Usuário:</label>
+            <input type="text" name="usuario" id="usuario">
+            <label for="senha">Senha:</label>
+            <input type="text" name="senha" id="senha">
+            <button type="submit">Verificar</button>
+        </form>
+        <h2 id="loginFeedback"></h2>
+        <p>Resposta à pergunta: Qualquer um entraria em qualquer conta e dados seriam roubados.</p>
     </section>
     <section class="opcao" id="atv9">
-        <h1>teste 4</h1>
+        <h1>8. Sistema de login</h1>
+        <form action="">
+            <label for="temperatura">Informe a temperatura:</label>
+            <input type="text" name="temperatura" id="temperatura">
+            <button type="submit">Verificar</button>
+        </form>
+        <h2>Situação: <span id="tempFeedback"></span></h2>
     </section>
     <section class="opcao" id="atv10">
-        <h1>teste 4</h1>
+        <form action="">
+            <label for="menubanco">Menu Banco</label>
+            <select name="menubanco" id="menubanco">
+                <option value="ver-saldo">Ver Saldo</option>
+                <option value="depositar">Depositar</option>
+                <option value="sacar">Sacar</option>
+                <option value="sair">Sair</option>
+            </select>
+            <button type="submit">Verificar</button>
+        </form>
+        <h2 id="bancoResult"></h2>
     </section>
     
 
@@ -121,10 +146,7 @@
             document.querySelectorAll(".opcao").forEach( (e) => {
             e.style.display = "none"
         })
-
             document.querySelector(`#${opcao.value}`).style.display = "grid";
-
-            console.log(opcao.value)
         })
     </script>
     <script type="module" src="./script.js"></script>
