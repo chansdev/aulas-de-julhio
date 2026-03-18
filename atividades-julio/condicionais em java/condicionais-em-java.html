@@ -141,8 +141,9 @@
         document.querySelectorAll(".opcao").forEach( (e) => {
             e.style.display = "none"
         })
+        opcao.value = "none"
 
-        opcao.addEventListener("click", () => {
+        opcao.addEventListener("change", () => {
             document.querySelectorAll(".opcao").forEach( (e) => {
             e.style.display = "none"
         })

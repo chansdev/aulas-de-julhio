@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parte Prática - JS</title>
+
+    <link rel="stylesheet" href="./parte-pratica-js.css">
+    <link rel="shortcut icon" href="./bigode.jpg" type="image/x-icon">
+</head>
+<body>
+    <h1>Qual atividade quer ver agora?</h1>
+    <select name="atvOpc" id="atvOpc">
+        <option value="atv1">1 - Entrada em uma festa</option>
+        <option value="atv2">2 — Compra em uma loja</option>
+        <option value="atv3">3 — Média de um aluno</option>
+        <option value="atv4">4 — Verificação de idade para dirigir</option>
+        <option value="atv5">5 — Divisão da conta</option>
+        <option value="atv6">6 — Verificação de número par</option>
+        <option value="atv7">7 — Desconto em uma loja</option>
+        <option value="atv8">8 — Sistema de acesso ao cinema</option>
+        <option value="atv9">9 — Comparação de preços</option>
+        <option value="atv10">10 — Entrada em um evento estudantil</option>
+    </select>
+    <p>(Abra o terminal!)</p>
+
+    <section class="opcao" id="atv1">
+        <h1>1 - Entrada em uma festa</h1>
+        <button id="btAtv1">começar</button>
+    </section>
+    <section class="opcao" id="atv2">
+        <h1>2 — Compra em uma loja</h1>
+        <button id="btAtv2">começar</button>
+    </section>
+    <section class="opcao" id="atv3">
+        <h1>3 — Média de um aluno</h1>
+        <button id="btAtv3">começar</button>
+    </section>
+    <section class="opcao" id="atv4">
+        <h1>4 — Verificação de idade para dirigir</h1>
+        <button id="btAtv4">começar</button>
+    </section>
+    <section class="opcao" id="atv5">
+        <h1>5 — Divisão da conta</h1>
+        <button id="btAtv5">começar</button>
+    </section>
+    <section class="opcao" id="atv6">
+        <h1>6 — Verificação de número par</h1>
+        <button id="btAtv6">começar</button>
+    </section>
+    <section class="opcao" id="atv7">
+        <h1>7 — Desconto em uma loja</h1>
+        <button id="btAtv7">começar</button>
+    </section>
+    <section class="opcao" id="atv8">
+        <h1>8 — Sistema de acesso ao cinema</h1>
+        <button id="btAtv8">começar</button>
+    </section>
+    <section class="opcao" id="atv9">
+        <h1>9 — Comparação de preços</h1>
+        <button id="btAtv9">começar</button>
+    </section>
+    <section class="opcao" id="atv10">
+        <h1>10 — Entrada em um evento estudantil</h1>
+        <button id="btAtv10">começar</button>
+    </section>
+
+    <script>
+        opcao = document.querySelector("#atvOpc");
+        document.querySelectorAll(".opcao").forEach( (e) => {
+            e.style.display = "none"
+        })
+        opcao.value = "none"
+
+        opcao.addEventListener("change", () => {
+            document.querySelectorAll(".opcao").forEach( (e) => {
+            e.style.display = "none"
+        })
+
+            document.querySelector(`#${opcao.value}`).style.display = "grid";
+        })
+    </script>
+
+    <script type="module" src="./script.js"></script>
+</body>
+</html>

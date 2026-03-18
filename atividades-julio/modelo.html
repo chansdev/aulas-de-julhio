@@ -35,15 +35,14 @@
         document.querySelectorAll(".opcao").forEach( (e) => {
             e.style.display = "none"
         })
+        opcao.value = "none"
 
-        opcao.addEventListener("click", () => {
+        opcao.addEventListener("change", () => {
             document.querySelectorAll(".opcao").forEach( (e) => {
             e.style.display = "none"
         })
 
             document.querySelector(`#${opcao.value}`).style.display = "grid";
-
-            console.log(opcao.value)
         })
     </script>
 </body>

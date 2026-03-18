@@ -1,0 +1,21 @@
+import entradaEmFesta from "./module/entradaEmFesta.js";
+import compraEmUmaLoja from "./module/compraEmUmaLoja.js";
+import mediaDeUmAluno from "./module/mediaDeUmAluno.js";
+import verificarIdadeDirigir from "./module/verificarIdadeDirigir.js";
+import divisaoConta from "./module/divisaoConta.js";
+import verificacaoPar from "./module/virificacaoPar.js";
+import descontoEmLoja from "./module/descontoEmLoja.js";
+import acessoCinema from "./module/acessoCinema.js";
+import comparacaoPreco from "./module/comparacaoPreco.js";
+import eventoEstudantil from "./module/eventoEstudantil.js";
+
+entradaEmFesta();
+compraEmUmaLoja();
+mediaDeUmAluno();
+verificarIdadeDirigir();
+divisaoConta();
+verificacaoPar();
+descontoEmLoja();
+acessoCinema();
+comparacaoPreco();
+eventoEstudantil(); 
