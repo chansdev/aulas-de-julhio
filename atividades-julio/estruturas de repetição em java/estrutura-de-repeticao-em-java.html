@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades de Heitor</title>
+
+    <link rel="stylesheet" href="./styel.css">
+    <link rel="shortcut icon" href="./bigode.jpg" type="image/x-icon">
+</head>
+<body>
+    <h1>Qual atividade quer ver agora?</h1>
+    <select name="atvOpc" id="atvOpc">
+        <option value="atv1">1 Sistema de tentativas de login</option>
+        <option value="atv2">2 Contador de curtidas em uma rede social</option>
+        <option value="atv3">3 Carregamento de aplicativo</option>
+        <option value="atv4">4 Sistema de níveis de um jogo</option>
+        <option value="atv5">5 Impressão de Ingressos</option>
+        <option value="atv6">6 Sistema que identifica números pares</option>
+        <option value="atv7">7 Sistema de verificação de idade em um evento</option>
+        <option value="atv8">8 Sistema de promoção em loja</option>
+        <option value="atv9">9 Sistema de avaliação de notas</option>
+        <option value="atv10">10 Sistema de contagem de clientes aprovados</option>
+    </select>
+
+    <section class="opcao" id="atv1">
+        <h1>1 Sistema de tentativas de login</h1>
+        <form action="./">
+            <h2>Olá, usuário!</h2>
+            <label for="senhaLogin">Informe sua senha:</label>
+            <input type="password" name="senhaLogin" id="senhaLogin">
+            <p class="tentativas"></p>
+            <button type="submit">entrar</button>
+        </form>
+    </section>
+    <section class="opcao" id="atv2">
+        <h1>2 Contador de curtidas em uma rede social</h1>
+        <button>Ver Curtidas</button>
+        <p>Contador de Curtidas<br></p>
+    </section>
+    <section class="opcao" id="atv3">
+        <h1>3 Carregamento de aplicativo</h1>
+        <button>começar</button>
+        <p></p>
+    </section>
+    <section class="opcao" id="atv4">
+        <h1>4 Sistema de níveis de um jogo</h1>
+        <button>começar</button>
+        <p></p>
+    </section>
+    <section class="opcao" id="atv5">
+        <h1>5 Impressão de ingressos</h1>
+        <button>começar</button>
+        <p></p>
+    </section>
+    <section class="opcao" id="atv6">
+        <h1>6 Sistema que identifica números pares</h1>
+        <button>começar</button>
+        <p></p>
+    </section>
+    <section class="opcao" id="atv7">
+        <h1>7 Sistema de verificação de idade em um evento</h1>
+        <button>começar</button>
+        <p></p>
+    </section>
+    <section class="opcao" id="atv8">
+        <h1>8 Sistema de promoção em loja</h1>
+        <button>começar</button>
+        <p></p>
+    </section>
+    <section class="opcao" id="atv9">
+        <h1>9 Sistema de avaliação de notas</h1>
+        <button>começar</button>
+        <p></p>
+    </section>
+    <section class="opcao" id="atv10">
+        <h1>10 Sistema de contagem de clientes aprovados</h1>
+        <button>começar</button>
+        <p></p>
+    </section>
+
+    <script>
+        opcao = document.querySelector("#atvOpc");
+        document.querySelectorAll(".opcao").forEach( (e) => {
+            e.style.display = "none"
+        })
+        opcao.value = "none"
+
+        opcao.addEventListener("change", () => {
+            document.querySelectorAll(".opcao").forEach( (e) => {
+            e.style.display = "none"
+        })
+
+            document.querySelector(`#${opcao.value}`).style.display = "grid";
+        })
+    </script>
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
