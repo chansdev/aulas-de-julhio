@@ -1,0 +1,25 @@
+.body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  display: grid;
+  padding: 15px 10px;
+  border: 2px solid black;
+  border-radius: 15px;
+  justify-items: center;
+  width: 300px;
+
+  img {
+    margin-bottom: 20px;
+    width: 236px;
+    height: 265px;
+    object-fit: contain;
+  }
+
+  p {
+    margin: 5px;
+  }
+}
