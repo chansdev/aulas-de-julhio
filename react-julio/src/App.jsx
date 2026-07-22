@@ -1,15 +1,14 @@
-import './App.css'
-import Card from '../components/card'
-import UseStateEffect from '../components/UseStateEffect'
-import React, { useState, useEffect } from 'react';
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import BemVindo from "./pages/BemVindo";
 
 function App() {
-
   return (
-    <div className='body'>
-      <UseStateEffect/>
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/bemvindo" element={<BemVindo />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
